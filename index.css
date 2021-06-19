@@ -37,6 +37,7 @@ main {
 }
 .allNotes div {
     padding: 10px;
+    font-weight: bold;
     margin-top: 5px;
     border-top-right-radius: 10px;
     border-bottom-left-radius: 10px;
@@ -47,6 +48,11 @@ main {
     background-color: cadetblue;
     color: white;
     transition: 2s all;
+}
+.allNotes div .postedDate {
+    margin-top: 11px;
+    font-weight: bold;
+    color: grey
 }
 .form-group {
 padding:5px;

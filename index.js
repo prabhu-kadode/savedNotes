@@ -6,9 +6,14 @@ const renderNotes = () => {
     savedNotes.forEach(element => {
         const divEl = document.createElement('div');
         const pEl = document.createElement('p');
+        const pEl2 = document.createElement('p');
+        pEl2.classList.add('postedDate');
         const textNode = document.createTextNode(element.note);
+        const textNodeDate = document.createTextNode(element.date);
         pEl.appendChild(textNode);
+        pEl2.appendChild(textNodeDate)
         divEl.appendChild(pEl);
+        divEl.appendChild(pEl2);
         document.getElementById("allNotesId").appendChild(divEl);
 
     });
