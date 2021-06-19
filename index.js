@@ -6,6 +6,7 @@ const renderNotes = () => {
     savedNotes.forEach(element => {
         const divEl = document.createElement('div');
         const pEl = document.createElement('p');
+        pEl.setAttribute("translate", "true");
         const pEl2 = document.createElement('p');
         pEl2.classList.add('postedDate');
         const textNode = document.createTextNode(element.note);
