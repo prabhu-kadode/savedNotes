@@ -38,8 +38,15 @@ main {
 .allNotes div {
     padding: 10px;
     margin-top: 5px;
-    border: 1px solid;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border: 2px solid cadetblue;
     box-sizing: border-box;
+}
+.allNotes div:hover {
+    background-color: cadetblue;
+    color: white;
+    transition: 2s all;
 }
 .form-group {
 padding:5px;
