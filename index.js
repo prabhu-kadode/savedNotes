@@ -22,6 +22,7 @@ const renderNotes = () => {
 }
 const saveNotes = () =>{
     const note = getTextFromTextArea();
+    if(!note) return;
     const notesBuilt = buildNotes(note);
     const savedNotes = getSavedNotes();
     localStorage.setItem('savedNotes',JSON.stringify([...savedNotes,notesBuilt]));
@@ -34,7 +35,9 @@ const getSavedNotes = () => {
 }
 const getTextFromTextArea = () => {
     const notesId = document.getElementById("notes");
-    return notesId.value;
+    const text = notesId.value;
+    notesId.value = "";
+    return text;
 }
 const buildNotes = (note) => {
     const noteId = generateRandomId();
