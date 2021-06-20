@@ -3,14 +3,14 @@ const renderNotes = () => {
     const savedNotes = getSavedNotes();
     document.getElementById("allNotesId").innerHTML = "";
     if(!savedNotes.length) return;
-    savedNotes.forEach(element => {
+    savedNotes.slice().reverse().forEach(element => {
         const divEl = document.createElement('div');
         const pEl = document.createElement('p');
         pEl.setAttribute("translate", "true");
         const pEl2 = document.createElement('p');
         pEl2.classList.add('postedDate');
         const textNode = document.createTextNode(element.note);
-        const textNodeDate = document.createTextNode(element.date);
+        const textNodeDate = document.createTextNode(new Date(element.date));
         pEl.appendChild(textNode);
         pEl2.appendChild(textNodeDate)
         divEl.appendChild(pEl);
