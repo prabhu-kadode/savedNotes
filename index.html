@@ -10,19 +10,23 @@
 </head>
 <body>
     <div class="container">
-        <header>
-            <h1>Welcome to SYN</h1>
+        <header id="header">
+            <h4>Welcome to SYN</h4>
             <p>You can save your notes and access them any time you want</p>
         </header>
         <main>
-            <div class="form">
+            <div class="form" id="textareaform">
             <div class="form-group">
                 <label for="notes">Write Your Notes</label>
-                <textarea id="notes" placeholder="Writes your notes..."></textarea>
+                <textarea id="notes" placeholder="Write your notes..."></textarea>
             </div>
             <div class="form-group">
                 <button onclick="saveNotes()">Save Notes</button>
+                <button onclick="expand()">Expand</button>
             </div>
+        </div>
+        <div class="collapse-btn" id="collapsebtnid">
+            <button onclick="collapse()">Collapse</button>
         </div>
         <div class="allNotes" id="allNotesId"></div>
         </main>

@@ -35,6 +35,21 @@ main {
     height:260px;
     overflow: scroll;
 }
+.allNotes100 {
+height: 100vh;
+}
+.collapse-btn {
+    display: none;
+}
+.collapse-btn button{
+    height:40px;
+    width:49%;
+    font-weight: bold;
+    font-size: medium;
+    /* color: cadetblue; */
+    background-color: cadetblue;
+    color: white;
+}
 .allNotes div {
     padding: 10px;
     font-weight: bold;
@@ -73,10 +88,17 @@ padding:5px;
 }
 .form-group button {
     height:40px;
-    width:100%;
+    width:49%;
     font-weight: bold;
     font-size: medium;
     /* color: cadetblue; */
     background-color: cadetblue;
     color: white;
+}
+.hideTextArea {
+    display: none;
+    transition: 2s all;;
+}
+.showcollapseBtn {
+    display: block;
 }
