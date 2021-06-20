@@ -1,4 +1,7 @@
-
+const textareaform = document.getElementById("textareaform");
+    const header = document.getElementById("header");
+    const noteId = document.getElementById("allNotesId");
+    const collapsebtnid = document.getElementById("collapsebtnid");
 const renderNotes = () => {
     const savedNotes = getSavedNotes();
     document.getElementById("allNotesId").innerHTML = "";
@@ -50,6 +53,18 @@ const buildNotes = (note) => {
 }
 const generateRandomId = () => {
     return "id_" + Math.floor(new Date().valueOf() * Math.random());
+}
+const expand = () => {
+    textareaform.classList.add('hideTextArea');
+    header.classList.add('hideTextArea');
+    noteId.classList.add("allNotes100");
+    collapsebtnid.classList.add("showcollapseBtn");
+}
+const collapse = () =>{
+    textareaform.classList.remove('hideTextArea');
+    header.classList.remove('hideTextArea');
+    noteId.classList.remove("allNotes100");
+    collapsebtnid.classList.remove("showcollapseBtn");
 }
 renderNotes();
 
