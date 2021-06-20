@@ -36,7 +36,7 @@ main {
     overflow: scroll;
 }
 .allNotes100 {
-height: 100vh;
+height: 80vh;
 }
 .collapse-btn {
     display: none;
